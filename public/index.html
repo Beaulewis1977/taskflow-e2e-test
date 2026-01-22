@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TaskFlow</h1>
+      <p>Simple Task Management</p>
+    </header>
+
+    <main>
+      <section class="add-task">
+        <h2>Add New Task</h2>
+        <form id="task-form">
+          <input type="text" id="title" placeholder="Task title" required maxlength="200">
+          <textarea id="description" placeholder="Description (optional)" maxlength="1000"></textarea>
+          <select id="priority">
+            <option value="low">Low Priority</option>
+            <option value="medium" selected>Medium Priority</option>
+            <option value="high">High Priority</option>
+          </select>
+          <button type="submit">Add Task</button>
+        </form>
+      </section>
+
+      <section class="filters">
+        <label>
+          Filter by status:
+          <select id="status-filter">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="in_progress">In Progress</option>
+            <option value="completed">Completed</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="task-list">
+        <h2>Tasks</h2>
+        <div id="tasks"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
